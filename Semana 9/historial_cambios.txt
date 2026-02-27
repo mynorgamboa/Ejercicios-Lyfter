@@ -1,0 +1,11 @@
+1st commit 1cff22eee24b9bdaca03ba3e3d339444516d10d0: 
+Fue el primer commit que hice siguiendo los pasos de
+la clase "Tu primer push a GitHub" el cual salio correcto al primer intento.
+
+2nd commit 843d7be078bb93c819501efe57f735ccb1833f97:
+Fue el segundo commit que he hecho siguiendo los pasos de la clase
+"Ejercicios de Git" puntos 2, 3 y 4 de la semana 9. Se hizo de esa
+manera debido a que seguí primero la clase mencionada en el commit
+anterior y ya no se pudo hacer de la misma forma.
+
+
