@@ -1,0 +1,38 @@
+name,group,grades,average
+
+Nezuko Kamado,11B,"{'Spanish': 78, 'English': 88, 'Socials': 70, 'Science': 89}",81.25
+
+Annie Leonhart,11A,"{'Spanish': 100, 'English': 99, 'Socials': 75, 'Science': 82}",89.0
+
+Naruto Uzumaki,11a,"{'Spanish': 82, 'English': 85, 'Socials': 80, 'Science': 84}",82.75
+
+Sienna Gamboa,11c,"{'Spanish': 78, 'English': 75, 'Socials': 80, 'Science': 77}",77.5
+
+Monkey D. Luffy,11b,"{'Spanish': 88, 'English': 84, 'Socials': 86, 'Science': 85}",85.75
+
+Mikasa Ackerman,11a,"{'Spanish': 91, 'English': 90, 'Socials': 89, 'Science': 92}",90.5
+
+Kai Herrera,11b,"{'Spanish': 85, 'English': 83, 'Socials': 84, 'Science': 82}",83.5
+
+Eren Jeager,11c,"{'Spanish': 96, 'English': 97, 'Socials': 95, 'Science': 94}",95.5
+
+Rachel Rojas,11a,"{'Spanish': 90, 'English': 92, 'Socials': 88, 'Science': 91}",90.25
+
+Tanjiro Kamado,11b,"{'Spanish': 87, 'English': 89, 'Socials': 85, 'Science': 88}",87.25
+
+Levi Ackerman,11c,"{'Spanish': 80, 'English': 78, 'Socials': 82, 'Science': 79}",79.75
+
+Edward Elric,11b,"{'Spanish': 89, 'English': 87, 'Socials': 90, 'Science': 88}",88.5
+
+Máximo Gamboa,11b,"{'Spanish': 99, 'English': 98, 'Socials': 97, 'Science': 100}",98.5
+
+Light Yagami,11c,"{'Spanish': 93, 'English': 91, 'Socials': 92, 'Science': 94}",92.5
+
+Mynor Gamboa,11a,"{'Spanish': 95, 'English': 94, 'Socials': 93, 'Science': 96}",94.5
+
+Saitama,11b,"{'Spanish': 86, 'English': 88, 'Socials': 84, 'Science': 87}",86.25
+
+Gon Freecss,11c,"{'Spanish': 70, 'English': 72, 'Socials': 74, 'Science': 71}",71.75
+
+Erwin Smith,11B,"{'Spanish': 96, 'English': 97, 'Socials': 100, 'Science': 77}",92.5
+
