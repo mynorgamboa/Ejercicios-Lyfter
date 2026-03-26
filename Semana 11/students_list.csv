@@ -1,0 +1,5 @@
+name,group,grades,average
+Maximo,11A,"{'Spanish': 100, 'English': 100, 'Socials': 100, 'Science': 100}",100.0
+Kai,11A,"{'Spanish': 90, 'English': 90, 'Socials': 90, 'Science': 90}",90.0
+Mynor,11B,"{'Spanish': 80, 'English': 80, 'Socials': 80, 'Science': 80}",80.0
+Rachel,11B,"{'Spanish': 70, 'English': 70, 'Socials': 70, 'Science': 70}",70.0
