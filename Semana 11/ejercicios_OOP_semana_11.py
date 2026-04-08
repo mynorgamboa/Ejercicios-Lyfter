@@ -1,8 +1,10 @@
 class Circle:
-    def get_area(self, radius):    
-        self.radius = radius
+    radius = 0
+    def get_area(self, rad):    
+        self.radius = rad
         area = 3.1415926536 * (self.radius ** 2)
         print(f"El area del circulo es {area}")
+        return area
 
 my_circle = Circle()
 my_circle.get_area(4)
@@ -14,37 +16,67 @@ class Person:
 		self.name = name
 		self.age = 0
 
-
 class Bus:
-    max_passengers = 5
-    passengers = []
-    amount_passengers = 1
+    max_passengers = 0
+    amount_passengers = 0
 
-    def get_on_the_bus(self):
-        
-        while (self.amount_passengers <= self.max_passengers):
-            named = input("Cual es el nombre del pasajero? ")
-            new_passenger = Person(named)
-            self.passengers.append(new_passenger.name)
+    def get_on_the_bus(self, new_passenger):
+        all_passengers = []
+        if (self.amount_passengers <= self.max_passengers):
+            self.passengers.append(new_passenger)
             self.amount_passengers += 1
-            print(self.passengers)
+            for passenger in self.passengers:
+                all_passengers.append(passenger.name)
+            print(f'Los pasajeros son: {all_passengers}')
         else:
-            print("El bus esta al máximo!")
+            print("El bus esta al máximo, ya nadie puede subir!")
     
     
     def get_off_the_bus(self):
-
-        while (len(self.passengers) >= 1):
+        if self.passengers:
+            all_passengers = []
             last = self.passengers.pop()
             self.amount_passengers -= 1
-            print(f"Se bajó a {last} y quedan los siguientes: {self.passengers}")
+            for passenger in self.passengers:
+                all_passengers.append(passenger.name)
+            print(f"Se bajó a {last.name} y quedan los siguientes: {all_passengers}")
         else:
-            print("El bus esta vacío!")
+            print('El Bus esta vacío!')
 
 my_bus = Bus()
+my_bus.max_passengers = 5
+my_bus.passengers = []
+my_bus.amount_passengers = 1
 
-my_bus.get_on_the_bus()
+name = input("Cual es el nombre del siguiente pasajero? ")
+person_1 = Person(name)
+my_bus.get_on_the_bus(person_1)
 
+name_2 = input("Cual es el nombre del siguiente pasajero? ")
+person_2 = Person(name_2)
+my_bus.get_on_the_bus(person_2)
+
+name_3 = input("Cual es el nombre del siguiente pasajero? ")
+person_3 = Person(name_3)
+my_bus.get_on_the_bus(person_3)
+
+name_4 = input("Cual es el nombre del siguiente pasajero? ")
+person_4 = Person(name_4)
+my_bus.get_on_the_bus(person_4)
+
+name_5 = input("Cual es el nombre del siguiente pasajero? ")
+person_5 = Person(name_5)
+my_bus.get_on_the_bus(person_5)
+
+name_6 = input("Cual es el nombre del siguiente pasajero? ")
+person_6 = Person(name_6)
+my_bus.get_on_the_bus(person_6)
+
+my_bus.get_off_the_bus()
+my_bus.get_off_the_bus()
+my_bus.get_off_the_bus()
+my_bus.get_off_the_bus()
+my_bus.get_off_the_bus()
 my_bus.get_off_the_bus()
 
 
