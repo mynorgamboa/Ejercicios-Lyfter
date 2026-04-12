@@ -1,13 +1,14 @@
 class Circle:
-    radius = 0
-    def get_area(self, rad):    
+    def __init__(self, rad):
         self.radius = rad
+
+    def get_area(self):    
         area = 3.1415926536 * (self.radius ** 2)
         print(f"El area del circulo es {area}")
         return area
 
-my_circle = Circle()
-my_circle.get_area(4)
+my_circle = Circle(20)
+my_circle.get_area()
 
 
 class Person:
@@ -17,8 +18,11 @@ class Person:
 		self.age = 0
 
 class Bus:
-    max_passengers = 0
-    amount_passengers = 0
+
+    def __init__(self, max_pass):
+        self.max_passengers = max_pass
+        self.amount_passengers = 0
+        self.passengers = []
 
     def get_on_the_bus(self, new_passenger):
         all_passengers = []
@@ -43,9 +47,7 @@ class Bus:
         else:
             print('El Bus esta vacío!')
 
-my_bus = Bus()
-my_bus.max_passengers = 5
-my_bus.passengers = []
+my_bus = Bus(5)
 my_bus.amount_passengers = 1
 
 name = input("Cual es el nombre del siguiente pasajero? ")
