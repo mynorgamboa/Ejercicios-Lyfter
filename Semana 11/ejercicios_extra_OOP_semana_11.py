@@ -6,52 +6,99 @@ class Rectangle:
         
 
     def get_area(rectangle):
-        area = rectangle.width * rectangle.height
-        if (rectangle.width > 0 and rectangle.height > 0):
-            print(f'The area of the rectangle is {area}')
-        else:
+        try:
+            area = rectangle.width * rectangle.height
+            if (rectangle.width > 0 and rectangle.height > 0):
+                return area
+            else:
+                raise ValueError()
+        except ValueError as ex:
             print('There is a negative value, try again!')
 
     def get_perimeter(rectangle):
-        perimeter = 2 * (rectangle.width+rectangle.height)
-        if (rectangle.width > 0 and rectangle.height > 0):
-            print(f'The perimeter of the rectangle is {perimeter}')
-        else:
+        try:
+            perimeter = 2 * (rectangle.width+rectangle.height)
+            if (rectangle.width > 0 and rectangle.height > 0):
+                return perimeter
+            else:
+                raise ValueError()
+        except ValueError as ex:
             print('There is a negative value, try again!')
-        
-
+            
 width = int(input('What is the width? '))
 height = int(input('What is the height? '))
 
 new_rectangle = Rectangle(width,height)
-new_rectangle.get_area()
-new_rectangle.get_perimeter()
+print(f'The area of the rectangle is {new_rectangle.get_area()}')
+print(f'The perimeter of the rectangle is {new_rectangle.get_perimeter()}')
 
 
+class Animal:
+    def __init__(self, name):
+        self.name = name
 
-class Car:
-    def __init__(self, brand, model):
-        self.brand = brand
-        self.model = model
-        self.speed = 0
+    def speak(self):
+        return 'Hace un sonido'
 
-    def acceleration(self, amount):
-        self.speed += amount
+
+class Dog(Animal):
+    def speak(self):
+        return 'Guau'
+
+class Cat(Animal):
+    def speak(self):
+        return 'Miau'
+
+
+my_dog = Dog('Ellie')
+my_cat = Cat('Gigi')
+
+print(f'Mi perro se llama {my_dog.name} y hace {my_dog.speak()}')
+print(f'Mi gato se llama {my_cat.name} y hace {my_cat.speak()}')
+
+
+#Cree una clase Product con: Nombre, precio y cantidad
+#Cree una clase Inventory que: Guarde productos en una lista
+#Tenga métodos para: Agregar un producto, Mostrar todos los productos, Calcular el valor total del inventario
+
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self. quantity = quantity
+
+
+class Inventory:
+    def __init__(self):
+        self.product_lists = []
+
     
-    def brake(self, amount):
-        self.speed -= amount
-    
-    def __str__(self):
-        print(f'{self.brand} {self.model} --> {self.speed} km/h')
+    def add_product(self, product):
+        self.product_lists.append(product)
+        return self.product_lists
 
-brand = input('What is the car brand? ')
-model = input(f'What is the {brand} model? ')
-new_car = Car(brand, model)
+    def show_products(self):
+        print ('Los productos son: ')
+        for product in self.product_lists:
+            print(f'Nombre: {product.name}, Precio: {product.price}, Cantidad: {product.price}')
 
-acceleration = int(input('What is the acceleration? '))
-new_car.acceleration(acceleration)
-new_car.__str__()
+    def total_amount(self):
+        total_price = 0
+        for product in self.product_lists:
+            total_unit = (product.quantity * product.price)
+            total_price += total_unit
+        return total_price
 
-brake = int(input('What is the brake? '))
-new_car.brake(brake)
-new_car.__str__()
+product_1 = Product("PS5",250000,7)
+product_2 = Product("PC gamer", 350000,2)
+product_3 = Product("Switch 2", 200000, 5)
+
+inventory = Inventory()
+
+inventory.add_product(product_1)
+inventory.add_product(product_2)
+inventory.add_product(product_3)
+
+inventory.show_products()
+
+print(f'El precio total de todo es: {inventory.total_amount()}')
