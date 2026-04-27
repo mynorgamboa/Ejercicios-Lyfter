@@ -2,10 +2,12 @@ from abc import ABC, abstractmethod
 
 class Shape(ABC):
 
-    def calculate_perimeter():
+    @abstractmethod
+    def calculate_perimeter(self):
         pass
 
-    def calculate_area():
+    @abstractmethod
+    def calculate_area(self):
         pass
 
 class Circle(Shape):
